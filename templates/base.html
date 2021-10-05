@@ -64,8 +64,8 @@
               <li class="list-inline-item dropdown">
                   <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <div class="text-center">
-                          <div><i class="fas fa-user-circle fa-lg"></i></div>
-                          <p class="my-0">My Account</p>
+                          <div><i class="fas fa-user-circle fa-lg color"></i></div>
+                          <p class="my-0 color">My Account</p>
                       </div>
                   </a>
                   <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -84,8 +84,8 @@
               <li class="list-inline-item">
                   <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                       <div class="text-center">
-                          <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                          <p class="my-0">
+                          <div><i class="fas fa-shopping-cart fa-lg color"></i></div>
+                          <p class="my-0 color">
                               {% if grand_total %}
                                   ${{ grand_total|floatformat:2 }}
                               {% else %}
@@ -118,9 +118,9 @@
     <div class="container-fluid footer-container">
       <div class="row">
         <div class="col-12 social p-2">
-          <a href="https://www.facebook.com" target="_blank">Facebook<i></i></a>
-          <a href="https://www.twitter.com" target="_blank">Twitter<i></i></a>
-          <a href="https://www.instagram.com" target="_blank">Instagram<i></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square mr-1" aria-hidden="true"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter-square mr-1" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
         <div class="col-12 p-2">
           <p>&#169; 2021 Sound Store</p>

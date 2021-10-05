@@ -1,6 +1,11 @@
 # Sound Store
 Sound Store is an e-commerce website which offers a range of different types of musical instruments and accessories. Users can create an account.
 
+# Technologies Used:
+1. Favicon (https://favicon.io/favicon-generator/) - To get icon for the sites tab.
+2. Font Awesome (https://fontawesome.com/v4.7/icons/) - To get icons for social media / shopping cart etc.
+3. Google Fonts - (https://fonts.google.com/) - To get letter styling fonts for the site.
+
 # Credits
 ## Photos:
 ### Carousel images on index.html
