@@ -10,7 +10,7 @@ body {
 
 .color {
     color: #122c34;
-}
+} 
 
 .hero {
     width: 100vw !important;
@@ -114,6 +114,32 @@ body {
     color: #e71d36;
 }
 
+#delivery-banner {
+    background-color: #ff9f1c;
+    font-family: 'Roboto', serif;
+}
+
+#delivery-banner > h4 {
+    color: #011627 !important;
+ }
+
+ .business-links {
+     display: flex;
+     justify-content: space-around;
+     list-style-type: none;
+     font-size: 22px;
+     font-family: 'Roboto', serif;
+ }
+
+ .business-links > li {
+    color: #011627 !important;
+ }
+
+ .business-links > li > a:hover {
+    text-decoration: none; 
+    list-style-type: none;
+    color: #36597d !important;
+ }  
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
