@@ -86,8 +86,32 @@ body {
     color: #122c34 !important;
 }
 
-.dropdown > a:hover {
+/* .dropdown > a:hover {
     color: #36597d !important;
+} */
+
+.dropdown-item {
+    color: #122c34;
+}
+
+.dropdown-item:hover {
+    background-color: #fdfffc;
+    color: #36597d; 
+}
+
+.category-head:focus {
+    color: #36597d !important;
+}
+
+.dropdown-menu {
+    box-shadow: 0px 0px 28px 0px #36597d;
+}
+
+.dropdown-heading {
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Sonsie One', serif;
+    color: #e71d36;
 }
 
 /* -------------------------------- Media Queries */
