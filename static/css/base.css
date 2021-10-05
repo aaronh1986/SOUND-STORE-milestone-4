@@ -77,6 +77,19 @@ body {
     color: #36597d !important;
 }
 
+.navbar {
+    background-color: #fdfffc;
+    height: 75px;
+}
+
+.dropdown > a {
+    color: #122c34 !important;
+}
+
+.dropdown > a:hover {
+    color: #36597d !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
