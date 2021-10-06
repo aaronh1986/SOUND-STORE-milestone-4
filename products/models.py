@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Category(models.Model):
+    # Change Categorys in database to Categories, from django defaults
+    class Meta:
+        verbose_name_plural = 'Categories'
     name = models.CharField(max_length=200)
     friendly_name = models.CharField(max_length=200, null=True, blank=True)
 
