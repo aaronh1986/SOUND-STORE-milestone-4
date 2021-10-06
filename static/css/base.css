@@ -140,6 +140,12 @@ body {
     list-style-type: none;
     color: #36597d !important;
  }  
+
+ .product-img {
+    width: 175px;
+    height: 175px;
+    object-fit: contain;
+ }
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
