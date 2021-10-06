@@ -16,16 +16,16 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font mt-4">All Products</h2>
-                <hr class="w50 mb-1">
             </div>
         </div>
-        <div class="row ">
+        <div class="row">
           {% for product in products %}
-            <div class="col-12">
+          <hr class="w-100 mt-3">
+            <div class="col-12 product-container">
               {% if product.image %}
               <a href="">
                   <img class="product-img img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -35,7 +35,15 @@
                   <img class="product-img img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
               </a>
               {% endif %}
-              <p class="mb-0">{{ product.name }}</p>
+              <div class="name-rating-container">
+              <p class="mb-0 product-name">{{ product.name }}</p>
+              {% if product.rating %}
+                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+              {% else %}
+                <small class="text-muted">There is no rating for this product, yet!</small>
+              {% endif %}
+              </div>
+              <p class="lead text-left font-weight-bold price">Our Price: ${{ product.price }}</p>
             </div>
           {% endfor %}
         </div>

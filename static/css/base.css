@@ -8,16 +8,11 @@ body {
     height: calc(100vh - 164px);
 }
 
+/* -------------------------------- base.html */
+
 .color {
     color: #122c34;
 } 
-
-.hero {
-    width: 100vw !important;
-    height: 375px !important;
-    margin: auto;
-    object-fit: cover;
-}  
 
 .navbar {
     height: 300px;
@@ -27,36 +22,6 @@ body {
 .logo {
     font-family: 'Sonsie One', serif;
     color: #122c34;
-}
-
-.category-container {
-    justify-content: space-around;
-}
-
-.category-images {
-    width: 110px;
-    height: 110px;
-    object-fit: contain;
-}
-
-.descriptor {
-    font-family: 'Roboto', serif;
-    color: #122c34;
-    text-align: left;
-}
-
-.category:hover {
-    text-decoration: underline;
-}
-
-.category:hover > p {
-    color: #36597d !important;
-}
-
-.category-logo {
-    text-align: center;
-    font-family: 'Tenor sans', serif;
-    font-size: 2.25rem;
 }
 
 .delivery {
@@ -141,11 +106,74 @@ body {
     color: #36597d !important;
  }  
 
+ /* -------------------------------- index.html */
+
+ .hero {
+    width: 100vw !important;
+    height: 375px !important;
+    margin: auto;
+    object-fit: cover;
+}  
+
+.category-container {
+    justify-content: space-around;
+}
+
+.category-images {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.descriptor {
+    font-family: 'Roboto', serif;
+    color: #122c34;
+    text-align: left;
+}
+
+.category:hover {
+    text-decoration: underline;
+}
+
+.category:hover > p {
+    color: #36597d !important;
+}
+
+.category-logo {
+    text-align: center;
+    font-family: 'Tenor sans', serif;
+    font-size: 2.25rem;
+}
+
+ /* -------------------------------- product.html */
+
  .product-img {
     width: 175px;
     height: 175px;
     object-fit: contain;
  }
+
+ .product-container {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .product-name {
+    font-family: 'Tenor Sans', serif;
+    color: #122c34;
+    font-size: 2rem;
+ }
+
+ .price {
+    font-family: 'Tenor Sans', serif;
+    color: #122c34;
+ }
+
+ .name-rating-container {
+     display: block;
+     text-align: center;
+ }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
