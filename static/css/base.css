@@ -183,12 +183,34 @@ body {
 
 .product-container {
     display: flex;
+    padding-top: 50px;
 }
 
 .detail-img {
-    height: 450px;
-    width: 450px;
+    height: 400px;
+    width: 400px;
     object-fit: contain;
+}
+
+.roboto {
+    font-family: 'Roboto', serif;
+}
+
+.product-name-detail {
+    font-family: 'Tenor Sans', serif;
+    color: #122c34;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.price-detail {
+    font-family: 'Tenor Sans', serif;
+    color: #122c34;
+    font-size: 2.5rem;
 }
 
 /* -------------------------------- Media Queries */
