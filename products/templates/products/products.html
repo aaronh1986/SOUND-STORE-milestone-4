@@ -22,21 +22,22 @@
                 <h2 class="logo-font mt-4">All Products</h2>
             </div>
         </div>
+    
         <div class="row">
           {% for product in products %}
           <hr class="w-100 mt-3">
             <div class="col-12 product-container">
               {% if product.image %}
-              <a href="">
+              <a href="{% url 'product_detail' product.id %}">
                   <img class="product-img img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
               </a>
               {% else %}
-              <a href="">
+              <a href="{% url 'product_detail' product.id %}">
                   <img class="product-img img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
               </a>
               {% endif %}
               <div class="name-rating-container">
-              <p class="mb-0 product-name">{{ product.name }}</p>
+              <p><a class="mb-0 product-name detail-link" href="{% url 'product_detail' product.id %}">{{ product.name }}</a></p>
               {% if product.rating %}
                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
               {% else %}
@@ -47,5 +48,7 @@
             </div>
           {% endfor %}
         </div>
+      </div>
     </div>
+  
 {% endblock %}
