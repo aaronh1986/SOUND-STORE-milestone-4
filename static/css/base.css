@@ -199,6 +199,10 @@ body {
     font-family: 'Tenor Sans', serif;
  }
 
+ .price-color {
+     color: #ff9f1c;
+ }
+
  /* -------------------------------- product_detail.html */
 
 .product-container {
