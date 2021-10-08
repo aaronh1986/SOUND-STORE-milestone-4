@@ -1,6 +1,17 @@
 # Sound Store
 Sound Store is an e-commerce website which offers a range of different types of musical instruments and accessories. Users can create an account.
 
+# Design:
+## Colours:
+The main colours on the site were taken from the Coolors app (https://coolors.co/). 
+These are:
+1. Dark blue colour = #011627 
+2. White colour = #FDFFFC
+3. Red Colour = #E71D36
+4. Orange colour = #FF9F1C
+5. Dark grey colour = #122C34
+6. Light blue colour, for :hover/:focus effect = #36597D
+
 # Technologies Used:
 1. Favicon (https://favicon.io/favicon-generator/) - To get icon for the sites tab.
 2. Font Awesome (https://fontawesome.com/v4.7/icons/) - To get icons for social media / shopping cart etc.
