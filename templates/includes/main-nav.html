@@ -19,10 +19,10 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="clothing-link">
                 <h6 class="dropdown-heading">Drums</h6>
-                <a href="" class="dropdown-item">Drum Sets</a>
-                <a href="" class="dropdown-item">Shell sets</a>
-                <a href="" class="dropdown-item">Cymbals</a>
-                <a href="" class="dropdown-item">All Drums</a>
+                <a href="{% url 'products' %}?category=drum_sets" class="dropdown-item">Drum Sets</a>
+                <a href="{% url 'products' %}?category=shell_sets" class="dropdown-item">Shell sets</a>
+                <a href="{% url 'products' %}?category=cymbals" class="dropdown-item">Cymbals</a>
+                <a href="{% url 'products' %}?category=drum_sets,shell_sets,cymbals" class="dropdown-item">All Drums</a>
             </div>
         </li>
 
@@ -32,9 +32,9 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                 <h6 class="dropdown-heading">Guitars</h6>
-                <a href="" class="dropdown-item">Electric</a>
-                <a href="" class="dropdown-item">Acoustic</a>
-                <a href="" class="dropdown-item">All Guitars</a>
+                <a href="{% url 'products' %}?category=electric_guitar" class="dropdown-item">Electric</a>
+                <a href="{% url 'products' %}?category=acoustic_guitar" class="dropdown-item">Acoustic</a>
+                <a href="{% url 'products' %}?category=electric_guitar,acoustic_guitar" class="dropdown-item">All Guitars</a>
             </div>
         </li>
 
@@ -44,9 +44,9 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <h6 class="dropdown-heading">Bass</h6>
-                <a href="" class="dropdown-item">Electric Basses</a>
-                <a href="" class="dropdown-item">Acoustic Basses</a>
-                <a href="" class="dropdown-item">All Basses</a>
+                <a href="{% url 'products' %}?category=electric_bass" class="dropdown-item">Electric Basses</a>
+                <a href="{% url 'products' %}?category=acoustic_bass" class="dropdown-item">Acoustic Basses</a>
+                <a href="{% url 'products' %}?category=electric_bass,acoustic_bass" class="dropdown-item">All Basses</a>
             </div>
         </li>
 
@@ -56,10 +56,10 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <h6 class="dropdown-heading">Brass</h6>
-                <a href="" class="dropdown-item">Trumpets</a>
-                <a href="" class="dropdown-item">Saxophones</a>
-                <a href="" class="dropdown-item">Trombones</a>
-                <a href="" class="dropdown-item">All Brass</a>
+                <a href="{% url 'products' %}?category=trumpet" class="dropdown-item">Trumpets</a>
+                <a href="{% url 'products' %}?category=saxophone" class="dropdown-item">Saxophones</a>
+                <a href="{% url 'products' %}?category=trombone" class="dropdown-item">Trombones</a>
+                <a href="{% url 'products' %}?category=trumpet,saxophone,trombone" class="dropdown-item">All Brass</a>
             </div>
         </li>
 
@@ -69,9 +69,9 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <h6 class="dropdown-heading">Strings</h6>
-                <a href="" class="dropdown-item">Violins</a>
-                <a href="" class="dropdown-item">Violas</a>
-                <a href="" class="dropdown-item">All Strings</a>
+                <a href="{% url 'products' %}?category=violin" class="dropdown-item">Violins</a>
+                <a href="{% url 'products' %}?category=viola" class="dropdown-item">Violas</a>
+                <a href="{% url 'products' %}?category=violin,viola" class="dropdown-item">All Strings</a>
             </div>
         </li>
 
@@ -81,10 +81,10 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <h6 class="dropdown-heading">Accessories</h6>
-                <a href="" class="dropdown-item">Microphones</a>
-                <a href="" class="dropdown-item">Hardware</a>
-                <a href="" class="dropdown-item">Strings & Straps </a>
-                <a href="" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'products' %}?category=microphones" class="dropdown-item">Microphones</a>
+                <a href="{% url 'products' %}?category=hardware" class="dropdown-item">Hardware</a>
+                <a href="{% url 'products' %}?category=strings_straps" class="dropdown-item">Strings & Straps </a>
+                <a href="{% url 'products' %}?category=microphones,hardware,strings_straps" class="dropdown-item">All Accessories</a>
             </div>
         </li>
     </ul>
