@@ -21,6 +21,13 @@
            <div class="col-12 product-container">
             <div class="center">
                 <p class="product-name-detail">{{ product.name }}</p>
+                {% if product.category %}
+              <p>
+              <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
+                <small class="text-muted"><i class="fa fa-sort mr-1" aria-hidden="true"></i>{{ product.category.friendly_name }}</small>
+              </a>
+              </p>
+              {% endif %}
                 {% if product.rating %}
                 <small class="text-muted roboto"><i class="fas fa-star mr-1"></i>Rated {{ product.rating }} / 5</small>
               {% else %}

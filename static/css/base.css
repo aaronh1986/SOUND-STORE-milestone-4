@@ -185,6 +185,20 @@ body {
     color: #36597d !important;
  }
 
+ .price-category {
+     display: block;
+ }
+
+ .under-product-head {
+    color: #122c34;
+    font-family: 'Tenor Sans', serif;
+ }
+
+ .under-product-head:hover {
+    color: #36597d !important;
+    font-family: 'Tenor Sans', serif;
+ }
+
  /* -------------------------------- product_detail.html */
 
 .product-container {
