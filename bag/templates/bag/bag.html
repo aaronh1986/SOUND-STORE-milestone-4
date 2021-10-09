@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}
+  | View Cart
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col">
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font mt-5 mb-5 center">Shopping Cart</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+                <div class="table-responsive rounded"></div>
+            {% else %}
+                <p class="center mb-5">Your bag is currently empty.</p>
+                <p class="center">
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <span class="text-uppercase back-btn">Back to store</span>
+                </a>
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

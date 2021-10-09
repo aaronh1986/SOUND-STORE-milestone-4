@@ -256,6 +256,17 @@ body {
     left: 33%;
 }
 
+/* -------------------------------- Shopping Cart */
+
+.back-btn {
+    color: #36597d; 
+    font-family: 'Roboto', serif;
+}
+
+.back-btn:hover {
+    color: #5e7a97;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
