@@ -256,19 +256,6 @@ body {
     left: 33%;
 }
 
-/* .btn-outline-black {
-    background: white;
-    color: black !important; 
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-} */
-
 .flex {
     display: flex;
 }
@@ -290,6 +277,16 @@ body {
 
 .back-btn:hover {
     color: #5e7a97;
+}
+
+.update {
+    color: #36597d !important;
+    cursor: pointer;
+}
+
+.remove {
+    color: #e71d36 !important;
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
