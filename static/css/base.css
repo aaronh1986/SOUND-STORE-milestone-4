@@ -256,9 +256,9 @@ body {
     left: 33%;
 }
 
-.btn-outline-black {
+/* .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important; 
     border: 1px solid black;
 }
 
@@ -267,7 +267,7 @@ body {
 .btn-outline-black:focus {
     background: black;
     color: white !important;
-}
+} */
 
 /* -------------------------------- Shopping Cart */
 
