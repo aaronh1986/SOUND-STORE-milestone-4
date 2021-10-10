@@ -68,7 +68,9 @@
             
         {% if product.image %}
         <div>
-        <p class="center"><img src="{{ product.brand_image.url  }}" alt="{{ product.category.name }}"></p>
+            {% if product.brand_image  %}
+            <p class="center"><img src="{{ product.brand_image.url  }}" alt="{{ product.category.name }}"></p>
+            {% endif %}
         <a href="{{ product.image.url }}" target="_blank">
             <img class="detail-img img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
         </a>
