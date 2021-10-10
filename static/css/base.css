@@ -269,6 +269,18 @@ body {
     color: white !important;
 } */
 
+.flex {
+    display: flex;
+}
+
+.fa-minus {
+    color: #36597d;
+}
+
+.fa-plus {
+    color: #e71d36;
+}
+
 /* -------------------------------- Shopping Cart */
 
 .back-btn {

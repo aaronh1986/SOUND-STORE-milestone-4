@@ -157,9 +157,6 @@
     {% block content %}
     {% endblock %}
     
-    {% block postloadjs %}
-    {% endblock %}
-
     <!--Footer-->
    <footer>
     <div class="container-fluid footer-container">
@@ -175,5 +172,7 @@
       </div>
     </div>
  </footer>
+    {% block postloadjs %}
+    {% endblock %}
   </body>
 </html>
