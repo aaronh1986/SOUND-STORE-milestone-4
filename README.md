@@ -17,6 +17,10 @@ These are:
 2. Font Awesome (https://fontawesome.com/v4.7/icons/) - To get icons for social media / shopping cart etc.
 3. Google Fonts - (https://fonts.google.com/) - To get letter styling fonts for the site.
 
+# Bugs Encountered
+1. When attempting to send webhook test events, I was receiving a result of "Test webhook error:401". This was fixed by opening up the ports tab in Gitpod and making the 8000 port public
+2. Due to the superuser being created at the beginning of development before the profiles app was created, the profiles app did not recognise the superuser name and threw an error 404 screen in response to my attempting to login to admin. This was fixed by commenting out the 'if created:' statement in the profiles.models file... {show picture} ... , logging in with the superuser name and password, and then uncommenting the code. On both the commenting and umcommenting of the if statement, the line inside was indented appropriately in order for the code to work.
+
 # Credits
 ## Photos:
 ### Carousel images on index.html
