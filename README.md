@@ -13,9 +13,14 @@ These are:
 6. Light blue colour, for :hover/:focus effect = #36597D
 
 # Technologies Used:
+## Programming languages and frameworks used:
+1. Html, Css, JavaScript and Python
+2. The Python framework Django was used to build the site.
+3. The bootstrap framework was used  
 1. Favicon (https://favicon.io/favicon-generator/) - To get icon for the sites tab.
 2. Font Awesome (https://fontawesome.com/v4.7/icons/) - To get icons for social media / shopping cart etc.
 3. Google Fonts - (https://fonts.google.com/) - To get letter styling fonts for the site.
+
 
 # Bugs Encountered
 ## Webhooks

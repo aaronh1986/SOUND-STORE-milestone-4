@@ -222,7 +222,11 @@
     </div>
     <div class="row">
       <div class="col-12 col-lg-7">
+        {% if from_profile %}
+        <a href="{ url 'profile' }" class="btn">Back to Profile</a>
+        {% else %}
         <a href="{ url 'products' }" class="btn">Back to store!</a>
+        {% endif %}
       </div>
     </div>
 </div>
