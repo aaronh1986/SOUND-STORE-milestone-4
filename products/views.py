@@ -72,8 +72,16 @@ def product_detail(request, product_id):
 
 def admin_product_add(request):
     """Allow a superuser add to the database while logged in to the site"""
-
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Product Added to Database")
+            return redirect(reverse('admin_product_add'))
+        else:
+            messages.error(request, 'Product not added, have you filled out form correctly?')
+    else:
+        form = ProductForm()
     template = 'products/admin_add.html'
     context = {
         'form': form,
