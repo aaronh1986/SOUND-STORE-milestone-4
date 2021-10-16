@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -67,3 +68,15 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def admin_product_add(request):
+    """Allow a superuser add to the database while logged in to the site"""
+
+    form = ProductForm()
+    template = 'products/admin_add.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
