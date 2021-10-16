@@ -108,7 +108,7 @@ form.addEventListener('submit', function(ev) {
             }
         });
     }).fail(function () {
-        // Reload page and show error message
+        // Reload page if a fail occurs
         location.reload();
     })
 });

@@ -1,0 +1,9 @@
+Sound Store - Confirmation of order {{ order.order_number }} received. 
+
+
+
+
+
+
+
+

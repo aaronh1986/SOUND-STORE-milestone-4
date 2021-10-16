@@ -1,0 +1,24 @@
+Sound Store - Confirmation of order {{ order.order_number }} received. 
+
+{{ order.date }}
+
+Thank you for your order {{order.full_name }},
+
+A confirmation of your order follows,
+
+Cost:
+Order Total: €{{ order.order_total }}
+Shipping Fees: €{{ order.delivery_cost }}
+Total (incl. shipping): €{{ order.grand_total }}
+
+
+Shipping Details:
+{{ order.street_address1 }},
+{{ order.street_address2 }},
+{{ order.town_or_city }},
+{{ order.country }}.
+
+Shipping of your order will take at least 1 week from date of order.
+
+Thank You,
+Sound Store
