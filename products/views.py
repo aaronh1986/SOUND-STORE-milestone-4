@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
@@ -70,8 +71,13 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required()
 def admin_product_add(request):
     """Allow a superuser to add to the database while logged in to the site"""
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have permission to access to this page')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -90,8 +96,12 @@ def admin_product_add(request):
     return render(request, template, context)
 
 
+@login_required()
 def admin_product_edit(request, product_id):
     """Allow a superuser to edit products in the database while logged in to the site"""
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have permission to access to this page')
+        return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -113,8 +123,12 @@ def admin_product_edit(request, product_id):
     return render(request, template, context)
 
 
+@login_required()
 def admin_product_delete(request, product_id):
     """Allow a superuser to delete products in the database while logged in to the site"""
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have permission to access to this page')
+        return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, f"Product deleted from database")
