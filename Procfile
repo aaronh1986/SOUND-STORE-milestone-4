@@ -1,0 +1,1 @@
+web: gunicorn sound_store.wsgi:application
