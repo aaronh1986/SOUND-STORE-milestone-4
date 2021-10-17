@@ -184,6 +184,16 @@ body {
      text-align: center;
  }
 
+ .price-and-btns {
+    display: block;
+    text-align: center;
+ }
+
+ .admin-btns {
+     display: flex;
+     text-align: center;
+ }
+
  .detail-link:hover {
     text-decoration: none;
     color: #36597d !important;

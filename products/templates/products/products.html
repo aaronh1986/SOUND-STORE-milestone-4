@@ -83,7 +83,15 @@
                 <small class="text-muted">There is no rating for this product, yet!</small>
               {% endif %}
               </div>
-              <p class="lead text-left font-weight-bold price">Our Price: ${{ product.price }}</p>
+              <div class="price-and-btns">
+                  <p class="lead text-left font-weight-bold price">Our Price: ${{ product.price }}</p>
+                  {% if request.user.is_superuser %}
+                    <div class="admin-btns">
+                      <a href="{% url 'admin_product_edit' product.id %}">Edit</a>
+                      <a href="{% url 'admin_product_delete' product.id %}">Delete</a>
+                    </div>
+                  {% endif %}
+              </div>
             </div>
           {% endfor %}
         </div>

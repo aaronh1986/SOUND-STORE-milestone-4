@@ -75,9 +75,9 @@ def admin_product_add(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, "Product Added to Database")
-            return redirect(reverse('admin_product_add'))
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Product not added, have you filled out form correctly?')
     else:
@@ -111,3 +111,11 @@ def admin_product_edit(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def admin_product_delete(request, product_id):
+    """Allow a superuser to delete products in the database while logged in to the site"""
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, f"Product deleted from database")
+    return redirect(reverse('products'))
