@@ -71,7 +71,7 @@ def product_detail(request, product_id):
 
 
 def admin_product_add(request):
-    """Allow a superuser add to the database while logged in to the site"""
+    """Allow a superuser to add to the database while logged in to the site"""
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -85,6 +85,29 @@ def admin_product_add(request):
     template = 'products/admin_add.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def admin_product_edit(request, product_id):
+    """Allow a superuser to edit products in the database while logged in to the site"""
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product edited in database.')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, f'Update failed, have you filled out the form correctly?')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'Editing {product.name}')
+    template = 'products/admin_edit.html'
+    context = {
+        'form': form,
+        'product': product,
     }
 
     return render(request, template, context)
