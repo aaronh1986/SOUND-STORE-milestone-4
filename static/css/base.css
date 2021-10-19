@@ -397,14 +397,24 @@ body {
 
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
+@media (max-width: 280px) {
+    .container {
+      max-width: 80%;
+    }
+
+    .icon-media-query {
+        height: 10px;
+        width: 10px;
+    }
+  }
+
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
     }
   }
   
-  /* fixed top navbar only on medium and up */
+  
   @media (min-width: 992px) {
       .fixed-top-desktop-only {
           position: fixed;
