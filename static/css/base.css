@@ -397,7 +397,7 @@ body {
 
 /* -------------------------------- Media Queries */
 
-@media (max-width: 320px) {
+/*@media (max-width: 320px) {
     .container {
       max-width: 80%;
     }
@@ -412,7 +412,7 @@ body {
         height: 8px;
         padding: 0.5px;
     }
-  }
+  } */
 
 @media (min-width: 1200px) {
     .container {
