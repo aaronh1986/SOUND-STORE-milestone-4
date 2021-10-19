@@ -19,6 +19,21 @@
    <div class="container mt-5">
        <div class="row">
            <div class="col-12 product-container">
+            {% if product.image %}
+            <div>
+                {% if product.brand_image  %}
+                <p class="center"><img src="{{ product.brand_image.url  }}" alt="{{ product.category.name }}"></p>
+                {% endif %}
+                <a href="{{ product.image.url }}" target="_blank">
+                <img class="detail-img img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+            </div>
+            {% else %}
+            <a>
+                <img class="detail-img img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+            </a>
+            {% endif %}
+            
             <div class="center">
                 <p class="product-name-detail">{{ product.name }}</p>
                 {% if product.category %}
@@ -90,21 +105,6 @@
 
 
             </div>
-            
-        {% if product.image %}
-        <div>
-            {% if product.brand_image  %}
-            <p class="center"><img src="{{ product.brand_image.url  }}" alt="{{ product.category.name }}"></p>
-            {% endif %}
-            <a href="{{ product.image.url }}" target="_blank">
-            <img class="detail-img img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-        </a>
-        </div>
-        {% else %}
-        <a>
-            <img class="detail-img img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-        </a>
-        {% endif %}
         
         </div>
        </div>
