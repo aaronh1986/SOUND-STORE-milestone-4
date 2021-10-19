@@ -472,4 +472,8 @@ body {
       .header-container {
           padding-top: 164px;
       }
+
+      .category-container-mobile {
+          display: none;
+      }
   }
