@@ -53,6 +53,13 @@ These are:
 4. On the project level settings.py file, I imported dj_database_url at the top of the file. I then commented out the DATABASES variable after copying it and changed the 'default' database configuration key to 'dj_database_url.parse('put DATABASE_URL in here taken from Heroku config variables')'. 
 5. I then ran migrations to the postgres database by typing 'python3 manage.py loaddata db.json' which loaded my db.json file to the new database. 
 6. (See Bugs Encountered, Deployment section, numbers 1 + 2 ). After deleting all of the user data in the new database, I created a new superuser with 'python3 manage.py createsuperuser' (name = admin, password = gtnwhnks ).
+7. I then set up an 'if' statement in my settings.py file so that while my project is connected to Heroku it will parse the DATABASE_URL enviornment variable that is stored in my account in order to run the database. Otherwise it will connect to my sqlite3 database if it cannot find this configuration variable.
+8. I then installed gunicorn by typing 'pip3 install gunicorn' and froze this requirement. Gunicorn works as the webserver for the project.
+9. I then created a Procfile. This was used to create a web dyno with heroku and run gunicorn in order to serve the django project.
+10. So that heroku would not collect static files upon deployment (as I was using AWS for this) I typed 'heroku config:set DISABLE_COLLECTSTATIC=1'. I also put the name of my heroku app into to the ALLOWED_HOSTS variable in settings.py. 
+11. I then git added, commited and pushed to github, and deployed to Heroku with 'git push heroku main'. 
+12. Then to ensure automatic deployment to Heroku when pushing to Github I went to my Heroku dashboard and on the Deploy tab clicked on the Github option in the Deployment Method section, and connected to my Github repository in the Connect to Github section below that. Then in the Automatic Deploys section, I clicked on Enable Automatic Deploys.
+13. I then went to https://miniwebtool.com/django-secret-key-generator/, to generate a secret key for my django app and put this in the Config Vars section of my Heroku app.
 
 
 
