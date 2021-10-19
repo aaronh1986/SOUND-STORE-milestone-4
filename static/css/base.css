@@ -397,7 +397,7 @@ body {
 
 /* -------------------------------- Media Queries */
 
-@media (max-width: 280px) {
+@media (max-width: 320px) {
     .container {
       max-width: 80%;
     }
@@ -407,13 +407,10 @@ body {
         width: 8px;
     }
 
-    .media-query-text {
-        font-size: 6px;
-    }
-
     .navbar-toggler-icon {
         width: 8px;
         height: 8px;
+        padding: 0.5px;
     }
   }
 
