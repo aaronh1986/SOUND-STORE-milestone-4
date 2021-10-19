@@ -31,7 +31,11 @@
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
-                            <th scope="col">Product Info</th>
+                            {% if bag_items.quantity > 1 %}
+                            <th scope="col">Cart Items</th>
+                            {% else %}
+                            <th scope="col">Cart Item</th>
+                            {% endif %}
                             <th scope="col"></th>
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
