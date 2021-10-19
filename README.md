@@ -59,7 +59,19 @@ These are:
 10. So that heroku would not collect static files upon deployment (as I was using AWS for this) I typed 'heroku config:set DISABLE_COLLECTSTATIC=1'. I also put the name of my heroku app into to the ALLOWED_HOSTS variable in settings.py. 
 11. I then git added, commited and pushed to github, and deployed to Heroku with 'git push heroku main'. 
 12. Then to ensure automatic deployment to Heroku when pushing to Github I went to my Heroku dashboard and on the Deploy tab clicked on the Github option in the Deployment Method section, and connected to my Github repository in the Connect to Github section below that. Then in the Automatic Deploys section, I clicked on Enable Automatic Deploys.
-13. I then went to https://miniwebtool.com/django-secret-key-generator/, to generate a secret key for my django app and put this in the Config Vars section of my Heroku app.
+13. I then went to https://miniwebtool.com/django-secret-key-generator/, to generate a secret key for my django app and put this in the Config Vars section of my Heroku app, removing it from settings.py and replacing with 'SECRET_KEY = os.environ.get('SECRET_KEY', '')'.
+
+## Deployment to S3 on Amazon Web Services
+Amazon Web Services S3 was used to store the projects static files and images.
+
+1. On 'aws.amazon.com' I set up an account following the onscreen instructions after clicking the orange button in the top right corner of the homepage. 
+2. Once logged in I clicked on s3 and pressed the orange button with Create Button on it.
+3. On the following page I unblocked public access.
+4. I then enabled Static Website Hosting.
+5. In the permissions tab, within the CORS configuration link I filled in the text area with code that connects the heroku app to the s3 bucket.
+6. Within the Bucket Policy tab I clicked on Generate Policy to generate my policy and then copied the policy into the text area of the Bucket Policy Tab on the previous page. 
+7. In the Access Control List tab, within the Public Access section I activated List Objects.
+
 
 
 
