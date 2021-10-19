@@ -30,10 +30,10 @@
                         <img class="d-block hero " src="{{ MEDIA_URL }}ms-4-hero.jpg" alt="Inner shop hero 2">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block hero " src="./media/ms-4-hero-2.jpg" alt="Inner shop hero 3">
+                        <img class="d-block hero " src="{{ MEDIA_URL }}ms-4-hero-2.jpg" alt="Inner shop hero 3">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block hero " src="./media/ms-4-hero.jpg" alt="Inner shop hero 4">
+                        <img class="d-block hero " src="{{ MEDIA_URL }}ms-4-hero.jpg" alt="Inner shop hero 4">
                       </div>
                     </div>
                 </div>
@@ -55,31 +55,31 @@
            </div>
            <div class="col-2 p-5 category">
              <a href="{% url 'products' %}?category=electric_guitar,acoustic_guitar">
-            <img class="category-images" src="/media/guitar-category-3.jpg" alt="Guitar Category">
+            <img class="category-images" src="{{ MEDIA_URL }}guitar-category-3.jpg" alt="Guitar Category">
             <p class="descriptor p-2">Guitars</p>
             </a>
           </div>
           <div class="col-2 p-5 category">
             <a href="{% url 'products' %}?category=electric_bass,acoustic_bass">
-            <img class="category-images" src="/media/bass-category.jpg" alt="Bass Guitar Category">
+            <img class="category-images" src="{{ MEDIA_URL }}bass-category.jpg" alt="Bass Guitar Category">
             <p class="descriptor p-2">Bass</p>
             </a>
           </div>
           <div class="col-2 p-5 category">
             <a href="{% url 'products' %}?category=trumpet,saxophone,trombone">
-            <img class="category-images" src="/media/trumpet-category-1.jpg" alt="Brass Category">
+            <img class="category-images" src="{{ MEDIA_URL }}trumpet-category-1.jpg" alt="Brass Category">
             <p class="descriptor p-2">Brass</p>
             </a>
           </div>
           <div class="col-2 p-5 category">
             <a href="{% url 'products' %}?category=violin,viola">
-            <img class="category-images" src="/media/viola-category.jpg" alt="String Instruments Category">
+            <img class="category-images" src="{{ MEDIA_URL }}viola-category.jpg" alt="String Instruments Category">
             <p class="descriptor p-2">Strings</p>
             </a>
           </div>
           <div class="col-2 p-5 category">
             <a href="{% url 'products' %}?category=microphones,hardware,strings_straps">
-            <img class="category-images" src="/media/accessories-category-1.jpg" alt="Accessories Category">
+            <img class="category-images" src="{{ MEDIA_URL }}accessories-category-1.jpg" alt="Accessories Category">
             <p class="descriptor p-2">Accessories</p>
             </a>
           </div>
