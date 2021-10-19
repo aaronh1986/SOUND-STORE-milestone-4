@@ -87,8 +87,8 @@
                   <p class="lead text-left font-weight-bold price">Our Price: ${{ product.price }}</p>
                   {% if request.user.is_superuser %}
                     <div class="admin-btns">
-                      <button class="edit-delete"><a href="{% url 'admin_product_edit' product.id %}">Edit</a></button>
-                      <button class="edit-delete"><a href="{% url 'admin_product_delete' product.id %}">Delete</a></button>
+                      <a class="edit" href="{% url 'admin_product_edit' product.id %}">Edit</a>
+                      <a class="delete" href="{% url 'admin_product_delete' product.id %}">Delete</a>
                     </div>
                   {% endif %}
               </div>

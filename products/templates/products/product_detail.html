@@ -84,8 +84,8 @@
                         </div>
                         {% if request.user.is_superuser %}
                     <div class="admin-btns">
-                      <button class="edit-delete"><a href="{% url 'admin_product_edit' product.id %}">Edit</a></button>
-                      <button class="edit-delete"><a href="{% url 'admin_product_delete' product.id %}">Delete</a></button>
+                      <a class="btn edit" href="{% url 'admin_product_edit' product.id %}">Edit</a>
+                      <a class="btn delete" href="{% url 'admin_product_delete' product.id %}">Delete</a>
                     </div>
                   {% endif %}
                     </div>

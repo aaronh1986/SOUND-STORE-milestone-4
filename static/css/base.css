@@ -282,6 +282,21 @@ body {
     color: #e71d36;
 }
 
+.admin-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit {
+    background-color: #2EC4B6;
+    color: #011627;
+}
+
+.delete {
+    background-color: #e71d36;
+    color: #011627;
+}
+
 /* -------------------------------- Product Management (admin_add.html, admin_edit.html) */
 
 .btn-file {
