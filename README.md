@@ -35,6 +35,27 @@ These are:
 5. After setting up my AWS S3 bucket and uploading my images to it, the images that were not also in my database and were linked to in image file paths in my code were not showing on my deployed heroku page. After going back through course material to ensure I had set up my S3 bucket correctly I finally tried something that I had seen others do on Slack. That is I put a link to the settings.py variable that links to my AWS account into the file paths on my index.html page. I put for example '{{ MEDIA_URL }}drums-category-1.jpg' in and this worked to render the images correctly on the deployed site.
 
 
+# Deployment
+## Deployment to Github
+1. First I created my project repository using the Code Institute template.
+2. From there I clicked on the green Gitpod button that brought me to the editor. This is the last time I accessed the project in this way, from there on I accessed it through going to gitpod.io/workspaces and clicking the dropdown on the right of the listing and pinning my project. This means that all of my installed packages will not need to be re-installed with each opening of the workspace. I would then click on the title to access the project. 
+3. When I was ready to commit an update of my work to github I typed into the command line interface, 'git add .', then 'git commit -m "Commit message", followed by 'git push' to push the update to the repository.
+
+### To Clone this Project
+1. On my github page, https://github.com/aaronh1986/Irish-Music-Vault, click on the button titled 'Code' to the left of the green button for accessing the editor.
+2. Click the button with the clipboard icon to copy the url. 
+3. Within the terminal of the editor, type git clone followed by copying in the url that you copied and press enter to create a clone of the project. You will need to change the current working directory to the location that you want to create the cloned project within.
+
+## Deployment to Heroku
+1. First I logged into my Heroku account, then clicked on the button in the top right of the screen with 'NEW' on it followed by 'Create New App'. I then titled my project 'ms-4-sound-store' and chose the region nearest mine.
+2. In the resources tab within the dashboard, I clicked on add-ons and provisioned Heroku Postgres. Then within my Gitpod terminal, I typed in 'pip3 install dj_database_url' which Django needs to connect to the Postgres database on Heroku. This command parses a database url that Heroku created and allows connection to it. I also installed a package with 'pip3 install psycopg2-binary' which django needs. I froze both of these requirements with 'pip3 freeze > requirements.txt'.
+3. I then backed up my database into a db.json file by running 'python3 manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json'.
+4. On the project level settings.py file, I imported dj_database_url at the top of the file. I then commented out the DATABASES variable after copying it and changed the 'default' database configuration key to 'dj_database_url.parse('put DATABASE_URL in here taken from Heroku config variables')'. 
+5. I then ran migrations to the postgres database by typing 'python3 manage.py loaddata db.json' which loaded my db.json file to the new database. 
+6. (See Bugs Encountered, Deployment section, numbers 1 + 2 ). After deleting all of the user data in the new database, I created a new superuser with 'python3 manage.py createsuperuser' (name = admin, password = gtnwhnks ).
+
+
+
 # Credits
 ## Photos:
 ### Carousel images on index.html
