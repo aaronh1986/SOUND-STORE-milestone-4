@@ -448,8 +448,8 @@ body {
         width: 100%;
     }
 
-    .categ-mob {
-        text-align: center;
+    .category-mob {
+        justify-content: space-around;
     }
   } 
 
