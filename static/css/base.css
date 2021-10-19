@@ -438,6 +438,14 @@ body {
         color: #122c34;
         font-size: 1rem;
     }
+
+    .category-mob {
+        padding: 4px !important;
+    }
+
+    .hero-mob {
+        width: 100%;
+    }
   } 
 
 @media (min-width: 1200px) {
