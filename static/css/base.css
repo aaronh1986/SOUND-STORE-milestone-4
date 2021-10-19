@@ -412,7 +412,7 @@ body {
 
 /* -------------------------------- Media Queries */
 
-/*@media (max-width: 320px) {
+@media (max-width: 320px) {
     .container {
       max-width: 80%;
     }
@@ -423,11 +423,22 @@ body {
     }
 
     .navbar-toggler-icon {
-        width: 8px;
-        height: 8px;
-        padding: 0.5px;
+        width: 7px;
+        height: 7px;
+        padding: 0px;
     }
-  } */
+
+    .dropdown-mobile {
+        background-color: #fdfffc;
+        color: #2ec4bc;
+    }
+
+    .mob-log {
+        font-family: 'Sonsie One', serif;
+        color: #122c34;
+        font-size: 1rem;
+    }
+  } 
 
 @media (min-width: 1200px) {
     .container {

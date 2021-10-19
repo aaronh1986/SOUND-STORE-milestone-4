@@ -70,7 +70,8 @@ Amazon Web Services S3 was used to store the projects static files and images.
 4. I then enabled Static Website Hosting.
 5. In the permissions tab, within the CORS configuration link I filled in the text area with code that connects the heroku app to the s3 bucket.
 6. Within the Bucket Policy tab I clicked on Generate Policy to generate my policy and then copied the policy into the text area of the Bucket Policy Tab on the previous page. 
-7. In the Access Control List tab, within the Public Access section I activated List Objects.
+7. In the Access Control List tab, within the Public Access section I activated List Objects for Everyone.
+8. To create a user for accessing my s3 bucket
 
 
 
