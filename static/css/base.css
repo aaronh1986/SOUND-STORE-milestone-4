@@ -403,8 +403,12 @@ body {
     }
 
     .icon-media-query {
-        height: 10px;
-        width: 10px;
+        height: 11px;
+        width: 11px;
+    }
+
+    .media-query-text {
+        font-size: 3px;
     }
   }
 
