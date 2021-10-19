@@ -446,6 +446,10 @@ body {
     .hero-mob {
         width: 100%;
     }
+
+    .categ-mob {
+        text-align: center;
+    }
   } 
 
 @media (min-width: 1200px) {
