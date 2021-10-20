@@ -23,17 +23,21 @@ These are:
 
 
 # Bugs Encountered
-## Webhooks bugs
+### Webhooks bugs
 1. When attempting to send webhook test events, I was receiving a result of "Test webhook error:401". This was fixed by opening up the ports tab in Gitpod and making the 8000 port public.
 2. On another occasion while trying to send a test webhook, I was receiving a result of "Test webhook error:404". This was fixed by updating the region code, i.e. "...eu(number)..." in the gitpod workspace url. This number appeared to change somewhat regularly and so needed to be updated in the stripe endpoint url in the stripe dashboard. 
 3. Due to the superuser being created at the beginning of development before the profiles app was created, the profiles app did not recognise the superuser name and threw an error 404 screen in response to my attempting to login to admin. This was fixed by commenting out the 'if created:' statement in the profiles.models file... {show picture} ... , logging in with the superuser name and password, and then uncommenting the code. On both the commenting and uncommenting of the 'if' statement, the line inside was indented appropriately in order for the code to work.
-## Deployment bugs
+
+### Deployment bugs
 1. When trying to load my db.json file to my postgres account I was encountering this result in the console. // Show picture here. To fix this I used a json formatter to make the file easier to read and then with advice from slack I identified where in the file a full country name was used instead of a two letter name which the installed 'CountryField' requires. I opened up my db.json file, found these full country names and changed them to two letter names instead and this fixed the issue.
 2. Again when trying to upload this db.json file I received this message // Show picture here. A suggestion seen on Slack suggested to upload the json file without any user information. So I identified, again using the json formatter, where this data was and deleted it. I then uploaded this file to postgres using 'python3 manage.py loaddata db.json' and the products and categories showed up in the site as expected.
 3. When trying to push to Heroku, I was getting an error due to my requirements.txt file including psycopg-binary==3.0.1. While I had installed psycopg2-binary==2.9.1, I hadn't installed the former and am not certain how it got in to my project. I deleted it from the requirements.txt file and the project pushed successfully to heroku.
 4. While trying to git push my media and static files to heroku I was getting a 'Push Failed' status which had the following code 'Error while running '$ python manage.py collectstatic --noinput''. In order to fix this I tried re-writing the code in my settings.py file to make sure it was correct. After some attempts with this I realised that my 'AWS_STORAGE_BUCKET_NAME' variable in settings.py was set to the wrong name. After fixing this the push to heroku was successful.
 5. After setting up my AWS S3 bucket and uploading my images to it, the images that were not also in my database and were linked to in image file paths in my code were not showing on my deployed heroku page. After going back through course material to ensure I had set up my S3 bucket correctly I finally tried something that I had seen others do on Slack. That is I put a link to the settings.py variable that links to my AWS account into the file paths on my index.html page. I put for example '{{ MEDIA_URL }}drums-category-1.jpg' in and this worked to render the images correctly on the deployed site.
 6. On one occasion after pushing to my heroku app, I began receiving the message pictured below on my deployed site. This was fixed by opening up my project in Firefox and working on it there for the rest of development, as opposed to Duck Duck Go which I had been using before that. // Insert image here
+
+### Blog app bugs
+1. After migrating my model for the blog app, and when trying to access it in the admin I was getting an Internal Server Error 500. To view what the issue was that was causing this, in the Heroku config variables I set DEVELOPMENT to True. 
 
 
 # Deployment

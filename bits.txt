@@ -473,3 +473,49 @@ def checkout_success(request, order_number):
 
 Was at very end of file
     {"model": "profiles.userprofile", "pk": 1, "fields": {"user": 1, "default_phone_number": "+353877458579", "default_street_address1": "19 Western Parkway Bus Ctr", "default_street_address2": "Ballymount Road", "default_town_or_city": "Walkinstown", "default_county": "Dublin", "default_postcode": "D12W978", "default_country": "IE"}}, {"model": "profiles.userprofile", "pk": 2, "fields": {"user": 2, "default_phone_number": "+353877458579", "default_street_address1": "19 Western Parkway Bus Ctr", "default_street_address2": "Ballymount Road", "default_town_or_city": "Walkinstown", "default_county": "Dublin", "default_postcode": "D12W978", "default_country": "IE"}}, {"model": "profiles.userprofile", "pk": 3, "fields": {"user": 3, "default_phone_number": "+353877458579", "default_street_address1": "19 Western Parkway Bus Ctr", "default_street_address2": "Ballymount Road", "default_town_or_city": "Walkinstown", "default_county": "Dublin", "default_postcode": "D12W978", "default_country": "IE"}}, {"model": "profiles.userprofile", "pk": 4, "fields": {"user": 4, "default_phone_number": null, "default_street_address1": null, "default_street_address2": null, "default_town_or_city": null, "default_county": null, "default_postcode": null, "default_country": null}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BLOG:
+
+
+
+
+
+author = models.CharField(max_length=250, null=False, blank=False)
+    author_id = models.ForeignKey(User, null=True, blank=True,
+                                 on_delete=models.SET_NULL)
+    blog_title = models.CharField(max_length=250, null=False, blank=False)
+    slug = models.SlugField(max_length=200)
+    post_head = models.CharField(max_length=400, null=False, blank=False)
+    post_main = models.TextField()
+    email = models.EmailField(max_length=254, null=True, blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    image_url = models.URLField(max_length=1000, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    class Meta:
+        ordering = ('-created_on',)
+
+
+
+
+
+
+
+        blog_author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name="blog_post")
+    blog_slug = models.SlugField(max_length=200)
+    blog_heading = models.CharField(max_length=400, null=False, blank=False)
+    blog_main = models.TextField()
+    blog_created = models.DateTimeField(auto_now_add=True)
