@@ -66,7 +66,7 @@ These are:
 Amazon Web Services S3 was used to store the projects static files and images.
 
 1. On 'aws.amazon.com' I set up an account following the onscreen instructions after clicking the orange button in the top right corner of the homepage. 
-2. Once logged in I clicked on s3 and pressed the orange button with Create Button on it.
+2. Once logged in I clicked on s3 and pressed the orange button with Create Bucket on it.
 3. On the following page I unblocked public access.
 4. I then enabled Static Website Hosting.
 5. In the permissions tab, within the CORS configuration link I filled in the text area with code that connects the heroku app to the s3 bucket.
@@ -77,9 +77,12 @@ Amazon Web Services S3 was used to store the projects static files and images.
 10. To create the group. I clicked on groups in the menu and clicked on the blue Create New Group button, giving my group the name manage-sound-store.
 11. Next I created a policy by clicking on the link for it in the dashboard and clicking on the Create Policy button. In the JSON tab I clicked on Import Managed Policy and searched and chose the 'Amazons3FullAccess' policy and clicked the Import button. To limit access to just my s3 bucket, I used the s3 bucket ARN number and pasted it into the resources key on the Create Policy page. Clicking on the Review Policy I gave it a name and clicked Create Policy. 
 12. Clicking on the group that I created in the groups tab, I then attached the policy to my group but clicking on the Attach Policy button and searching for my group name to attach it to.
-13. Lastly I created a User for access to the group. I clicked on Users in the dashboard and created a user named sound-store-staticfiles-user, clicking on the Programmatic Access box.
+13. I then created a User for access to the group. I clicked on Users in the dashboard and created a user named sound-store-staticfiles-user, clicking on the Programmatic Access box.
 14. I then clicked the box next to my group's name and pressed next page until I came to a button titled Create User.
 15. This gave me access to a CSV file giving me access to the users Access Key and Secret Access Key which were necessary to link between the s3 bucket and my django project.   
+16. To connect Django to the s3 bucket, I installed two packages, boto3 and django-storages using the command for installing packages, 'pip3 install (package name)' and froze these requirements. I added 'storages' to the installed apps section of my readme.
+17. I put my AWS Access Key and Aws Secret Access Key into my settings.py file and put the actual values for these in my Heroku app config variables so that they do not get pushed to Github and therefore exposed.
+18. In settings.py I inserted my bucket name, region name, access to both aforementioned keys from Heroku config variables and a link to the s3 bucket domain name where my static files are kept.
 
 
 
