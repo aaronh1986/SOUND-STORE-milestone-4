@@ -83,6 +83,10 @@ Amazon Web Services S3 was used to store the projects static files and images.
 16. To connect Django to the s3 bucket, I installed two packages, boto3 and django-storages using the command for installing packages, 'pip3 install (package name)' and froze these requirements. I added 'storages' to the installed apps section of my readme.
 17. I put my AWS Access Key and Aws Secret Access Key into my settings.py file and put the actual values for these in my Heroku app config variables so that they do not get pushed to Github and therefore exposed.
 18. In settings.py I inserted my bucket name, region name, access to both aforementioned keys from Heroku config variables and a link to the s3 bucket domain name where my static files are kept.
+19. I then created a file named custom_storages.py, which will be used to connect django to the AWS s3 account for uploading static files and media images. I then linked to this file in the settings.py file. By typing 'git add .', 'git commit -m "commit-message"', and 'git push', all of my static and media files are uploaded to my s3 bucket.
+20. To add media image files to s3, I clicked on the Create Folder button in my project overview on the dashboard of my AWS s3 account. I called it 'media' and inside it I clicked on the Upload and Add Files buttons and uploaded all of the images for my project. Having done that I clicked on the Next button and in the Manage Public Permissions section I chose Grant Public Read Access To This Object(s). I then clicked the Upload button.
+21. I linked Stripe to my s3 account by getting the test Publishable Key from my Stripe dashboard and inserting it into the config variables section of my heroku dashboard. 
+22. Then I created a new endpoint for my stripe webhooks by going to the webhooks section of the Stripe dashboard. I added my deployed heroku project's url as the endpoint. I got the Signing Secret key that was revealed after setting up the endpoint and inserted it into the config variables section of my heroku project.
 
 
 
