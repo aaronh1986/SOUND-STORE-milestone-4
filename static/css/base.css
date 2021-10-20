@@ -155,6 +155,10 @@ body {
     font-size: 2.25rem;
 }
 
+.large-category-screen {
+    justify-content: space-around;
+}
+
  /* -------------------------------- product.html */
 
  .product-img {
