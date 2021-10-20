@@ -72,7 +72,14 @@ Amazon Web Services S3 was used to store the projects static files and images.
 5. In the permissions tab, within the CORS configuration link I filled in the text area with code that connects the heroku app to the s3 bucket.
 6. Within the Bucket Policy tab I clicked on Generate Policy to generate my policy and then copied the policy into the text area of the Bucket Policy Tab on the previous page. 
 7. In the Access Control List tab, within the Public Access section I activated List Objects for Everyone.
-8. To create a user for accessing my s3 bucket
+8. To create a user for accessing my s3 bucket I clicked on IAM (Identity & Access Management) in the services section of my aws dashboard. 
+9. Firstly I created a group to which to give access to my s3 policy. And then I created a user which was part of that group.
+10. To create the group. I clicked on groups in the menu and clicked on the blue Create New Group button, giving my group the name manage-sound-store.
+11. Next I created a policy by clicking on the link for it in the dashboard and clicking on the Create Policy button. In the JSON tab I clicked on Import Managed Policy and searched and chose the 'Amazons3FullAccess' policy and clicked the Import button. To limit access to just my s3 bucket, I used the s3 bucket ARN number and pasted it into the resources key on the Create Policy page. Clicking on the Review Policy I gave it a name and clicked Create Policy. 
+12. Clicking on the group that I created in the groups tab, I then attached the policy to my group but clicking on the Attach Policy button and searching for my group name to attach it to.
+13. Lastly I created a User for access to the group. I clicked on Users in the dashboard and created a user named sound-store-staticfiles-user, clicking on the Programmatic Access box.
+14. I then clicked the box next to my group's name and pressed next page until I came to a button titled Create User.
+15. This gave me access to a CSV file giving me access to the users Access Key and Secret Access Key which were necessary to link between the s3 bucket and my django project.   
 
 
 
