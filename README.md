@@ -61,6 +61,7 @@ These are:
 11. I then git added, commited and pushed to github, and deployed to Heroku with 'git push heroku main'. 
 12. Then to ensure automatic deployment to Heroku when pushing to Github I went to my Heroku dashboard and on the Deploy tab clicked on the Github option in the Deployment Method section, and connected to my Github repository in the Connect to Github section below that. Then in the Automatic Deploys section, I clicked on Enable Automatic Deploys.
 13. I then went to https://miniwebtool.com/django-secret-key-generator/, to generate a secret key for my django app and put this in the Config Vars section of my Heroku app, removing it from settings.py and replacing with 'SECRET_KEY = os.environ.get('SECRET_KEY', '')'.
+14. When trying to create a new app in the terminal, I was getting an error stating "raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.") django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.". Since I had put my SECRET_KEY variable into Heroku config vars, gitpod could not find the value for working locally. I first put the value into the enviornment on my gitpod.io/workspaces account. That did not seem to work even after refreshing the workspace. After that I decided to create an env.py file and put the value in there. That fixed the problem.
 
 ## Deployment to S3 on Amazon Web Services
 Amazon Web Services S3 was used to store the projects static files and images.
