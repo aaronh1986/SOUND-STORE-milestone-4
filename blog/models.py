@@ -8,6 +8,5 @@ class BlogPost(models.Model):
     blog_slug = models.SlugField(max_length=200)
     blog_heading = models.CharField(max_length=400, null=False, blank=False)
     blog_main = models.TextField()
-    blog_created = models.DateTimeField(auto_now_add=True)
     blog_image_url = models.URLField(max_length=1000, null=True, blank=True)
     blog_image = models.ImageField(null=True, blank=True)
